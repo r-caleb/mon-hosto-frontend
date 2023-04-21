@@ -30,29 +30,24 @@ const CardHosto = ({ hosto, actualPosition }) => {
   };
 
   const positionBack = {
-    lat: parseFloat(hosto.latitude),
-    lng: parseFloat(hosto.longitude),
+    lat: parseFloat(hosto?.values[0]?.latitude),
+    lng: parseFloat(hosto?.values[0]?.longitude),
   };
-  console.log("a", positionBack);
+  //console.log("a", positionBack);
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate(`/a_hospital/${hosto._id}`);
+    navigate(`/a_hospital/${hosto.values[0]._id}`);
   };
   return (
     <>
-      <Col
-        md="4"
-        onClick={() => {
-          getDistance(actualPosition, positionBack);
-        }}
-      >
+      <Col md="4" onClick={handleClick}>
         <Card className="card-shadow">
           <a className="img-ho">
             <img className="card-img-top" src={img1} alt="wrappixel kit" />
           </a>
           <CardBody>
-            <h5 className="font-medium m-b-0">{hosto?.name}</h5>
-            <p className="m-b-0 font-14">{`Ouvert ${hosto.availability}`}</p>
+            <h5 className="font-medium m-b-0">{hosto?.values[0]?.name}</h5>
+            <p className="m-b-0 font-14">{`Ouvert ${hosto?.values[0]?.availability}`}</p>
             <p>{distance} km de ta position</p>
           </CardBody>
         </Card>

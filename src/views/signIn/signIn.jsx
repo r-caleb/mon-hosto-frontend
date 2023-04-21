@@ -22,6 +22,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { userLogin } from "../../redux/authSlice/authActions";
+import { useEffect } from "react";
 
 function Copyright(props) {
   return (
@@ -47,6 +48,8 @@ export default function SignIn() {
   const [showPassword, setShowPassword] = React.useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   const [error, setError] = React.useState({});
+  const { token, loading } = useSelector((state) => state.auth);
+
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };

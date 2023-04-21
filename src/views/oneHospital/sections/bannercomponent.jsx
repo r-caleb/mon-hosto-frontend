@@ -28,13 +28,6 @@ const BannerComponent = ({ oneHospitalInfo }) => {
                     <p>Site Web : {oneHospitalInfo?.website}</p>
                     <p>Adresse de l'hôpital : {oneHospitalInfo?.address}</p>
                     <p>Ouvert : {oneHospitalInfo?.availability}</p>
-                   {/*  <p>Nombres de docteurs : {oneHospitalInfo?.availability}</p>
-                    <p>
-                      Nombres de Généraliste : {oneHospitalInfo?.availability}
-                    </p>
-                    <p>
-                      Nombres de Spécialiste : {oneHospitalInfo?.availability}
-                    </p> */}
                   </div>
                 </CardBody>
               </Card>
