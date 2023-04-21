@@ -21,6 +21,7 @@ const Hospital = () => {
   const { hospitalInfo } = useSelector((state) => state.hospital);
   const { serviceInfo } = useSelector((state) => state.service);
   const { pocessInfo } = useSelector((state) => state.pocess);
+  const { token, loading, error } = useSelector((state) => state.auth);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -42,6 +43,11 @@ const Hospital = () => {
   const pocessAll = pocessInfo?.map((pocess) => {
     return { ...pocess.serviceID, ...pocess.hospitalID };
   });
+  useEffect(() => {
+    if (!token) {
+      navigate("/sign-in");
+    }
+  }, [token, navigate]);
 
   return (
     <div id="main-wrapper">

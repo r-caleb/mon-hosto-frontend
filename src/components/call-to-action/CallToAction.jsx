@@ -18,7 +18,7 @@ const CallToAction = () => {
                   laissez un avis
                 </h6>
                 <a
-                  href="/#coming"
+                  href="/contact_us"
                   className="btn btn-outline-light m-r-20 btn-md m-t-30 font-14"
                 >
                   Contactez-nous

@@ -11,7 +11,17 @@ const FormBannerComponent = () => {
           <Row className="justify-content-center">
             <Col md="9" className="text-center">
               <h1 className="title font-bold">Comment ça marche ?</h1>
-              <h6 className="subtitle">ddd</h6>
+              <div className="video-responsive">
+                <iframe
+                  width="900"
+                  height="480"
+                  src={`https://www.youtube.com/embed/mhGipeZeH_0`}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title="Embedded youtube"
+                />
+              </div>
             </Col>
           </Row>
         </Container>

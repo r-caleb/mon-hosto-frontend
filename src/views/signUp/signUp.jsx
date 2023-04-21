@@ -22,6 +22,7 @@ import { Col, Row } from "reactstrap";
 import { registerUser } from "../../redux/authSlice/authActions";
 import { useDispatch } from "react-redux";
 import logo from "../../assets/images/logos/logo.png";
+import { useNavigate } from "react-router-dom";
 
 function Copyright(props) {
   return (
@@ -52,6 +53,7 @@ export default function SignUp() {
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -67,6 +69,7 @@ export default function SignUp() {
     };
     if ({ ...body }) {
       dispatch(registerUser(body));
+      navigate("/sign-in");
     } else {
       setError((prev) => {
         return { ...prev, All: "Remplissez tous les champs" };

@@ -27,8 +27,8 @@ const Header = () => {
       <div className="header1 po-relative bg-dark">
         <Container>
           <Navbar className="navbar-expand-lg h1-nav">
-            <NavbarBrand href="#">
-             <img src={logo} alt="monhosto" className="logo"/> 
+            <NavbarBrand href="/">
+              <img src={logo} alt="monhosto" className="logo" />
             </NavbarBrand>
             <NavbarToggler onClick={toggle}>
               <span className="ti-menu"></span>

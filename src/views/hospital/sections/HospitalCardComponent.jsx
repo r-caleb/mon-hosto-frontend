@@ -94,7 +94,7 @@ const HospitalCardComponent = ({ hospitalInfo, actualPosition, treat }) => {
       <div className="spacer">
         <Container>
           <Row className="justify-content-center">
-            <Col md="4" className="text-center">
+            <Col md="5" className="text-center">
               {service !== "proche" ? (
                 <h3 className="title">Les hôpitaux par service</h3>
               ) : (
