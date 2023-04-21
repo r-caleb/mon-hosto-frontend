@@ -21,6 +21,7 @@ import { TbCameraPlus } from "react-icons/tb";
 import { Col, Row } from "reactstrap";
 import { registerUser } from "../../redux/authSlice/authActions";
 import { useDispatch } from "react-redux";
+import logo from "../../assets/images/logos/logo.png";
 
 function Copyright(props) {
   return (
@@ -93,6 +94,7 @@ export default function SignUp() {
             alignItems: "center",
           }}
         >
+          <img src={logo} alt="logo du site" className="logo" />
           <Avatar sx={{ m: 1, bgcolor: "#ff4d7e" }}>
             <LockOutlinedIcon />
           </Avatar>
@@ -236,7 +238,7 @@ export default function SignUp() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign Up
+              S'INSCRIRE
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>

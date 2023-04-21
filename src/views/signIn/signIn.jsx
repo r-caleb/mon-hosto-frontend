@@ -23,6 +23,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { userLogin } from "../../redux/authSlice/authActions";
 import { useEffect } from "react";
+import logo from "../../assets/images/logos/logo.png";
 
 function Copyright(props) {
   return (
@@ -98,7 +99,9 @@ export default function SignIn() {
             alignItems: "center",
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: "#ff4d7e" }}>
+          {" "}
+          <img src={logo} alt="logo du site" className="logo" />
+          <Avatar sx={{ mt: 3, bgcolor: "#ff4d7e" }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">

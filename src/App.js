@@ -11,15 +11,7 @@ import { useSelector } from "react-redux";
 import OneHospital from "./views/oneHospital/oneHospital.jsx";
 
 function App() {
-  const { token, loading } = useSelector((state) => state.auth);
-
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (!loading && !token) {
-      navigate("/sign-in");
-    }
-  }, [token, loading, navigate]);
+  
   return (
     <Routes>
       <Route path="/" element={<Home />} />
