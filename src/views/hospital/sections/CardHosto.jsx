@@ -58,7 +58,7 @@ const CardHosto = ({ hosto, actualPosition, service }) => {
             <h5 className="font-medium m-b-0">{hosto?.values[0]?.name}</h5>
             <p className="m-b-0 font-14">{`Ouvert ${hosto?.values[0]?.address}`}</p>
             <p className="m-b-0 font-14 green">{`Ouvert ${hosto?.values[0]?.availability}`}</p>
-            {service === "proche" && <p>{distance} km de ta position</p>}
+            {service === "proche" && <p className="font-bold">{distance} km de ta position</p>}
           </CardBody>
         </Card>
       </Col>

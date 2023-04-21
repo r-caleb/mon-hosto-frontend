@@ -12,7 +12,7 @@ const BannerComponent = ({ oneHospitalInfo }) => {
           <Row>
             <Col lg="10">
               <img
-                src={img1}
+                src={oneHospitalInfo?.picture}
                 className="rounded img-responsive"
                 alt="wrappixel"
               />
@@ -22,12 +22,12 @@ const BannerComponent = ({ oneHospitalInfo }) => {
                 <CardBody>
                   <div className="p-20">
                     <h3 className="title">{oneHospitalInfo?.name}</h3>
-                    <p>Ville : {oneHospitalInfo?.townID?.name}</p>
-                    <p>Type : {oneHospitalInfo?.type}</p>
-                    <p>Contact : {oneHospitalInfo?.phone}</p>
-                    <p>Site Web : {oneHospitalInfo?.website}</p>
-                    <p>Adresse de l'hôpital : {oneHospitalInfo?.address}</p>
-                    <p>Ouvert : {oneHospitalInfo?.availability}</p>
+                    <p className="font-bold">Ville : {oneHospitalInfo?.townID?.name}</p>
+                    <p className="font-bold">Type : {oneHospitalInfo?.type}</p>
+                    <p className="font-bold">Contact : {oneHospitalInfo?.phone}</p>
+                    <p className="font-bold">Site Web : {oneHospitalInfo?.website}</p>
+                    <p className="font-bold">Adresse de l'hôpital : {oneHospitalInfo?.address}</p>
+                    <p className="font-bold">Ouvert : {oneHospitalInfo?.availability}</p>
                   </div>
                 </CardBody>
               </Card>

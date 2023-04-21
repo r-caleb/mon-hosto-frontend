@@ -6,7 +6,7 @@ import CardHosto from "./CardHosto";
 
 const HospitalCardComponent = ({ hospitalInfo, actualPosition, treat }) => {
   const [activeElement, setActiveElement] = useState("Tout");
-  const [service, setService] = useState("");
+  const [service, setService] = useState("proche");
   const [input, setInput] = useState("");
 
   const groupObjectByField = (items, field) => {
@@ -63,7 +63,7 @@ const HospitalCardComponent = ({ hospitalInfo, actualPosition, treat }) => {
                 </Col>
                 <Col lg="6" md="5" className="align-self-end ">
                   <FormGroup className="form_select">
-                    <Label for="exampleSelect">Choisissez un filtre </Label>
+                    <Label for="exampleSelect" className="title font-bold">Choisissez un filtre </Label>
                     <select onChange={(text) => setService(text.target.value)}>
                       <option>--</option>
                       <option value="proche">Les plus proches</option>
@@ -94,8 +94,12 @@ const HospitalCardComponent = ({ hospitalInfo, actualPosition, treat }) => {
       <div className="spacer">
         <Container>
           <Row className="justify-content-center">
-            <Col md="7" className="text-center">
-              <h2 className="title">Les hôpitaux les plus proches</h2>
+            <Col md="4" className="text-center">
+              {service !== "proche" ? (
+                <h3 className="title">Les hôpitaux par service</h3>
+              ) : (
+                <h3 className="title">Les hôpitaux les plus proches</h3>
+              )}
             </Col>
             <Col></Col>
           </Row>
