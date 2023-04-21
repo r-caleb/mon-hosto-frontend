@@ -21,7 +21,6 @@ const Hospital = () => {
   const { hospitalInfo } = useSelector((state) => state.hospital);
   const { serviceInfo } = useSelector((state) => state.service);
   const { pocessInfo } = useSelector((state) => state.pocess);
-  
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -43,19 +42,7 @@ const Hospital = () => {
   const pocessAll = pocessInfo?.map((pocess) => {
     return { ...pocess.serviceID, ...pocess.hospitalID };
   });
-  const groupObjectByField = (items, field) => {
-    const outputs = {};
-    items?.forEach((item) => {
-      if (outputs.hasOwnProperty(item[field])) {
-        outputs[item[field]].values.push(item);
-      } else {
-        outputs[item[field]] = { name: item[field], values: [item] };
-      }
-    });
-    return Object.values(outputs);
-  };
-  const pocess = groupObjectByField(pocessAll, "name");
-  console.log(pocess);
+
   return (
     <div id="main-wrapper">
       <Header />
@@ -63,7 +50,7 @@ const Hospital = () => {
         <div className="container-fluid">
           <HeaderBanner2 />
           <HospitalCardComponent
-            hospitalInfo={pocess}
+            hospitalInfo={pocessAll}
             actualPosition={actualPosition}
             treat={treat}
           />

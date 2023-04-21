@@ -7,9 +7,35 @@ import CardHosto from "./CardHosto";
 const HospitalCardComponent = ({ hospitalInfo, actualPosition, treat }) => {
   const [activeElement, setActiveElement] = useState("Tout");
   const [service, setService] = useState("");
+  const [input, setInput] = useState("");
+
+  const groupObjectByField = (items, field) => {
+    const outputs = {};
+    items?.forEach((item) => {
+      if (outputs.hasOwnProperty(item[field])) {
+        outputs[item[field]].values.push(item);
+      } else {
+        outputs[item[field]] = { name: item[field], values: [item] };
+      }
+    });
+    return Object.values(outputs);
+  };
+
   const handleClick = (value) => {
     setActiveElement(value);
   };
+  const infos = hospitalInfo?.filter((hosto) =>
+    activeElement !== "Tout" ? hosto.service == activeElement : true
+  );
+  const infoshosto =
+    infos &&
+    infos.filter((info) =>
+      input ? info.name.toLowerCase().includes(input.toLowerCase()) : true
+    );
+  console.log(infos);
+  const pocess = groupObjectByField(infoshosto, "name");
+
+  console.log("infos", pocess);
   return (
     <div>
       <div className="bg-light">
@@ -25,6 +51,8 @@ const HospitalCardComponent = ({ hospitalInfo, actualPosition, treat }) => {
                       name="search"
                       placeholder="écrivez le nom d'un hôptital"
                       className="font-16"
+                      value={input}
+                      onChange={(e) => setInput(e.target.value)}
                     />
                     <input
                       type="submit"
@@ -72,9 +100,13 @@ const HospitalCardComponent = ({ hospitalInfo, actualPosition, treat }) => {
             <Col></Col>
           </Row>
           <Row className="m-t-40">
-            {hospitalInfo &&
-              hospitalInfo?.map((hosto) => (
-                <CardHosto hosto={hosto} actualPosition={actualPosition} />
+            {pocess &&
+              pocess?.map((hosto) => (
+                <CardHosto
+                  hosto={hosto}
+                  actualPosition={actualPosition}
+                  service={service}
+                />
               ))}
           </Row>
         </Container>

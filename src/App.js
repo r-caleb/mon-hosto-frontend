@@ -14,12 +14,12 @@ function App() {
   const { token, loading } = useSelector((state) => state.auth);
 
   const navigate = useNavigate();
-  /* useEffect(() => {
-    if (token == "null") {
+
+  useEffect(() => {
+    if (!loading && !token) {
       navigate("/sign-in");
     }
-  }, [token, navigate]);
- */
+  }, [token, loading, navigate]);
   return (
     <Routes>
       <Route path="/" element={<Home />} />

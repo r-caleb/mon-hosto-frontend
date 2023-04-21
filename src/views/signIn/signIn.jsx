@@ -47,8 +47,8 @@ const theme = createTheme();
 export default function SignIn() {
   const [showPassword, setShowPassword] = React.useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
-  const [error, setError] = React.useState({});
-  const { token, loading } = useSelector((state) => state.auth);
+  const [errors, setError] = React.useState({});
+  const { token, loading, error } = useSelector((state) => state.auth);
 
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
@@ -81,7 +81,11 @@ export default function SignIn() {
       });
     }
   };
-
+  useEffect(() => {
+    if (token) {
+      navigate("/");
+    }
+  }, [token, navigate]);
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
@@ -116,6 +120,7 @@ export default function SignIn() {
               autoComplete="tel"
               autoFocus
             />
+            <p className="error">{errors?.phoneNumber}</p>
             <FormControl sx={{ mt: 2 }} variant="outlined" fullWidth>
               <InputLabel htmlFor="outlined-adornment-password">
                 Mot de passe *
@@ -139,10 +144,14 @@ export default function SignIn() {
                 label="Mot de passe"
               />
             </FormControl>
+            <p className="error">{errors?.password}</p>
+
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Se souvenir de moi"
             />
+            <p className="error">{errors?.All}</p>
+            {error && <p className="error">numero ou mot de passe incorrect</p>}
             <Button
               type="submit"
               fullWidth
