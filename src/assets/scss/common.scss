@@ -1,9 +1,3 @@
-/*
-Template Name: Wrakit UI Kit
-Author: wrappixel
-Email: niravjoshi87@gmail.com
-File: scss
-*/
 
 /******************* 
 Topbar
@@ -53,6 +47,7 @@ Header 6
     }
   }
 }
+
 
 @media (max-width: 1023px) {
   .h6-nav-bar {
@@ -1596,4 +1591,16 @@ Modal in center
 .animated {
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
+}
+
+
+.watchScreen__player{
+  height: 80vh;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+@media (max-width: 520px) {
+  .watchScreen__player {
+     height: 35vh;
+  }
 }

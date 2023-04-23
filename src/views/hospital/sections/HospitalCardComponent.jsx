@@ -32,10 +32,10 @@ const HospitalCardComponent = ({ hospitalInfo, actualPosition, treat }) => {
     infos.filter((info) =>
       input ? info.name.toLowerCase().includes(input.toLowerCase()) : true
     );
-  console.log(infos);
+  //console.log(infos);
   const pocess = groupObjectByField(infoshosto, "name");
 
-  console.log("infos", pocess);
+  //console.log("infos", pocess);
   return (
     <div>
       <div className="bg-light">
@@ -63,9 +63,11 @@ const HospitalCardComponent = ({ hospitalInfo, actualPosition, treat }) => {
                 </Col>
                 <Col lg="6" md="5" className="align-self-end ">
                   <FormGroup className="form_select">
-                    <Label for="exampleSelect" className="title font-bold">Choisissez un filtre </Label>
+                    <Label for="exampleSelect" className="title font-bold">
+                      Choisissez un filtre{" "}
+                    </Label>
                     <select onChange={(text) => setService(text.target.value)}>
-                      <option>--</option>
+                      <option>__ Selectionner __</option>
                       <option value="proche">Les plus proches</option>
                       <option value="service">Services</option>
                     </select>

@@ -34,11 +34,14 @@ const Hospital = () => {
     dispatch(getAllService());
     dispatch(getAllPocess());
   }, [dispatch]);
-  const treat = serviceInfo?.map((service) => {
+  let treat = serviceInfo?.map((service) => {
     return service.service;
   });
-  console.log(treat);
-  console.log(pocessInfo);
+  if (serviceInfo) {
+    treat = ["Tout", ...treat];
+  }
+  //console.log(treat);
+  //console.log(pocessInfo);
   const pocessAll = pocessInfo?.map((pocess) => {
     return { ...pocess.serviceID, ...pocess.hospitalID };
   });

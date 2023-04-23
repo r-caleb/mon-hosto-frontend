@@ -8,42 +8,56 @@ const Footer = () => {
       <Container>
         <Row>
           <Col lg="3" md="6" className="m-b-30">
-            <h5 className="m-b-20">Adresse</h5>
+            <h5 className="m-b-20" style={{color:'white'}}>Adresse</h5>
             <p>
               Kobo Hub, Avenue kwango, immeuble 130 B, 5, em niveau, Kinshasa,
               République démocratique du Congo
             </p>
           </Col>
           <Col lg="3" md="6" className="m-b-30">
-            <h5 className="m-b-20">Phone</h5>
+            <h5 className="m-b-20" style={{color:'white'}}>Phone</h5>
             <p>
               Téléphone : +243 825 989 080 <br />
             </p>
           </Col>
           <Col lg="3" md="6" className="m-b-30">
-            <h5 className="m-b-20">Email</h5>
+            <h5 className="m-b-20" style={{color:'white'}}>Email</h5>
             <p>
-              <a href="#" className="link">
+              <a href="mailto:calebakasa7@gmail.com" className="link"  style={{color:'#8d97ad'}}>
                 calebakasa7@gmail.com
-              </a>{" "}
+              </a>
             </p>
           </Col>
           <Col lg="3" md="6">
-            <h5 className="m-b-20">Social</h5>
+            <h5 className="m-b-20" style={{color:'white'}}>Social</h5>
             <div className="round-social light">
-              <a href="#" className="link">
+              <a
+                href="https://web.facebook.com/caleb.akasa"
+                target="_blank"
+                className="link"
+              >
                 <i className="fa fa-facebook"></i>
               </a>
-              <a href="#" className="link">
+              <a
+                href="https://twitter.com/caleb_akasa"
+                target="_blank"
+                className="link"
+              >
                 <i className="fa fa-twitter"></i>
               </a>
-              <a href="#" className="link">
-                <i className="fa fa-google-plus"></i>
-              </a>
-              <a href="#" className="link">
+
+              <a
+                href="https://www.youtube.com/channel/UC2xgKoGei5S5Yet39CGPWCg"
+                target="_blank"
+                className="link"
+              >
                 <i className="fa fa-youtube-play"></i>
               </a>
-              <a href="#" className="link">
+              <a
+                href="https://www.instagram.com/calebakasa/"
+                target="_blank"
+                className="link"
+              >
                 <i className="fa fa-instagram"></i>
               </a>
             </div>
@@ -54,7 +68,7 @@ const Footer = () => {
             <Col md="12">
               <div className="d-flex font-14">
                 <div className="m-t-10 m-b-10 copyright">
-                Copyright © 2023 monhosto | Tous droits réservés par R_C.
+                  Copyright © 2023 monhosto | Tous droits réservés par R_C.
                 </div>
                 <div className="links ml-auto m-t-10 m-b-10">
                   <a href="#" className="p-10 p-l-0">
