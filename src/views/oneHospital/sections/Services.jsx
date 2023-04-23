@@ -4,7 +4,7 @@ import { Row, Col, Container, Card } from "reactstrap";
 
 import img1 from "../../../assets/images/blog/blog-home/img3.jpg";
 
-const BlogComponent = ({ oneHospitalInfo }) => {
+const Services = ({ oneHospitalInfo }) => {
   return (
     <div>
       <div className="blog-home2 spacer">
@@ -36,4 +36,4 @@ const BlogComponent = ({ oneHospitalInfo }) => {
   );
 };
 
-export default BlogComponent;
+export default Services;

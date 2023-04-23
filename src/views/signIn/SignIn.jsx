@@ -49,7 +49,7 @@ export default function SignIn() {
   const [showPassword, setShowPassword] = React.useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   const [errors, setError] = React.useState({});
-  const { token, loading, error } = useSelector((state) => state.auth);
+  const { token, error } = useSelector((state) => state.auth);
 
   const handleMouseDownPassword = (event) => {
     event.preventDefault();

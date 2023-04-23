@@ -1,14 +1,14 @@
 import React from "react";
 
 // core components
-import Header from "../../components/header/header.jsx";
-import HeaderBanner from "../../components/banner/banner.jsx";
-import Footer from "../../components/footer/footer.jsx";
+import Header from "../../components/header/Header.jsx";
+import HeaderBanner from "../../components/banner/Banner.jsx";
+import Footer from "../../components/footer/Footer.jsx";
 
 // sections for this page
-import Objectifs from "./sections/objectifs.jsx";
-import FormBannerComponent from "./sections/formbannercomponent.jsx";
-import TestimonialComponent from "./sections/testimonialcomponent.jsx";
+import Objectifs from "./sections/Objectifs.jsx";
+import HowItWork from "./sections/HowItWork.jsx";
+import TestimonialComponent from "./sections/TestimonialComponent.jsx";
 import CallToAction from "../../components/call-to-action/CallToAction.jsx";
 
 const Home = () => {
@@ -19,7 +19,7 @@ const Home = () => {
         <div className="container-fluid">
           <HeaderBanner />
           <Objectifs />
-          <FormBannerComponent />
+          <HowItWork />
           <TestimonialComponent />
           <CallToAction />
         </div>

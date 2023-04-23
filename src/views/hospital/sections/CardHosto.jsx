@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Row, Col, Container, Card, CardBody } from "reactstrap";
 
-import img1 from "../../../assets/images/portfolio/hj.jpg";
+
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 

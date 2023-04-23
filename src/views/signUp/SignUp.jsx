@@ -235,6 +235,7 @@ export default function SignUp() {
                 </FormControl>
               </Grid>
             </Grid>
+            <p className="error">{error?.All}</p>
             <Button
               type="submit"
               fullWidth

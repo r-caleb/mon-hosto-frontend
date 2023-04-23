@@ -1,9 +1,8 @@
 import React from "react";
-import { Row, Col, Container, Form } from "reactstrap";
+import { Row, Col, Container } from "reactstrap";
 
-import banner from "../../../assets/images/form-banners/banner1/banner-img.png";
 
-const FormBannerComponent = () => {
+const HowItWork = () => {
   return (
     <div>
       <div className="spacer bg-light">
@@ -30,4 +29,4 @@ const FormBannerComponent = () => {
   );
 };
 
-export default FormBannerComponent;
+export default HowItWork;

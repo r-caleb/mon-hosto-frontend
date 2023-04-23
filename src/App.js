@@ -1,12 +1,11 @@
-import React, { useEffect } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
-import Home from "./views/home/home.jsx";
-import Hospital from "./views/hospital/hospital.jsx";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./views/home/Home.jsx";
+import Hospital from "./views/hospital/Hospital.jsx";
 import Contact from "./views/contact/contact.jsx";
-import SignIn from "./views/signIn/signIn.jsx";
-import SignUp from "./views/signUp/signUp.jsx";
-import { useSelector } from "react-redux";
-import OneHospital from "./views/oneHospital/oneHospital.jsx";
+import SignIn from "./views/signIn/SignIn.jsx";
+import SignUp from "./views/signUp/SignUp.jsx";
+import OneHospital from "./views/oneHospital/OneHospital.jsx";
 
 function App() {
   return (

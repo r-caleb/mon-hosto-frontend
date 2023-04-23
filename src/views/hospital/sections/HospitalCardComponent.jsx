@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { useState } from "react";
-import { Row, Col, Container, Form, FormGroup, Label, Input } from "reactstrap";
+import { Row, Col, Container, Form, FormGroup, Label } from "reactstrap";
 
 import CardHosto from "./CardHosto";
 

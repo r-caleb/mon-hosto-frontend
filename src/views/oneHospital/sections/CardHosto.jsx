@@ -1,8 +1,7 @@
 /* eslint-disable */
 import React from "react";
-import { Row, Col, Container, Card, CardBody } from "reactstrap";
+import { Col, Card, CardBody } from "reactstrap";
 
-import img1 from "../../../assets/images/portfolio/hj.jpg";
 
 const CardHosto = ({ hosto }) => {
   return (
