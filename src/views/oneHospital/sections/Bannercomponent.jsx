@@ -2,31 +2,37 @@
 import React from "react";
 import { Row, Col, Container, Card, CardBody } from "reactstrap";
 
-
 const BannerComponent = ({ oneHospitalInfo }) => {
   return (
     <div>
       <div className="spacer ">
         <Container className="feature30">
           <Row>
-            <Col lg="10">
+            <Col lg="8">
               <img
-                src={oneHospitalInfo?.picture}
+                src={oneHospitalInfo[0]?.picture}
                 className="rounded img-responsive"
-                alt="wrappixel"
+                alt="hospital logo"
               />
             </Col>
-            <Col lg="5" md="7" className="text-center wrap-feature30-box">
+            <Col lg="5" md="6" className="text-center wrap-feature30-box">
               <Card className="card-shadow">
                 <CardBody>
                   <div className="p-20">
-                    <h3 className="title">{oneHospitalInfo?.name}</h3>
-                    <p className="font-bold">Ville : {oneHospitalInfo?.townID?.name}</p>
-                    <p className="font-bold">Type : {oneHospitalInfo?.type}</p>
-                    <p className="font-bold">Contact : {oneHospitalInfo?.phone}</p>
-                    <p className="font-bold">Site Web : {oneHospitalInfo?.website}</p>
-                    <p className="font-bold">Adresse de l'hôpital : {oneHospitalInfo?.address}</p>
-                    <p className="font-bold">Ouvert : {oneHospitalInfo?.availability}</p>
+                    <h3 className="title">{oneHospitalInfo[0]?.name}</h3>
+                    <p className="font-bold">Type : {oneHospitalInfo[0]?.type}</p>
+                    <p className="font-bold">
+                      Contact : {oneHospitalInfo[0]?.phone}
+                    </p>
+                    <p className="font-bold">
+                      Site Web : {oneHospitalInfo[0]?.website}
+                    </p>
+                    <p className="font-bold">
+                      Adresse de l'hôpital : {oneHospitalInfo[0]?.address}
+                    </p>
+                    <p className="font-bold">
+                      Ouvert : {oneHospitalInfo[0]?.availability}
+                    </p>
                   </div>
                 </CardBody>
               </Card>

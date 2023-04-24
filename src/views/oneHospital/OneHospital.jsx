@@ -12,6 +12,7 @@ import BannerComponent from "./sections/Bannercomponent.jsx";
 import { useParams } from "react-router-dom";
 import TeamComponent from "./sections/Teamcomponent.jsx";
 import Services from "./sections/Services.jsx";
+import HeaderBanner2 from "./sections/Banner2.jsx";
 
 const OneHospital = () => {
   const { id } = useParams();
@@ -45,8 +46,8 @@ const OneHospital = () => {
       <Header />
       <div className="page-wrapper">
         <div className="container-fluid">
-          <BannerComponent oneHospitalInfo={oneProcessValues[0]} />
-          <TeamComponent oneHospitalInfo={oneProcessValues[0]} />
+          <BannerComponent oneHospitalInfo={oneProcessValues} />
+          <TeamComponent oneHospitalInfo={oneProcessValues} />
           <Services oneHospitalInfo={oneProcessValues} />
         </div>
       </div>

@@ -3,11 +3,14 @@ import React, { useState } from "react";
 import { Row, Col, Container, Form, FormGroup, Label } from "reactstrap";
 
 import CardHosto from "./CardHosto";
+import SkeletonVideo from "../../../components/skeletons/skeletonVideo";
+import { useSelector } from "react-redux";
 
 const HospitalCardComponent = ({ hospitalInfo, actualPosition, treat }) => {
   const [activeElement, setActiveElement] = useState("Tout");
   const [service, setService] = useState("proche");
   const [input, setInput] = useState("");
+  const { loading } = useSelector((state) => state.pocess);
 
   const groupObjectByField = (items, field) => {
     const outputs = {};
@@ -106,14 +109,20 @@ const HospitalCardComponent = ({ hospitalInfo, actualPosition, treat }) => {
             <Col></Col>
           </Row>
           <Row className="m-t-40">
-            {pocess &&
-              pocess?.map((hosto) => (
-                <CardHosto
-                  hosto={hosto}
-                  actualPosition={actualPosition}
-                  service={service}
-                />
-              ))}
+            {!loading
+              ? pocess &&
+                pocess?.map((hosto) => (
+                  <CardHosto
+                    hosto={hosto}
+                    actualPosition={actualPosition}
+                    service={service}
+                  />
+                ))
+              : [...Array(8)].map(() => (
+                  <Col md={4}>
+                    <SkeletonVideo />
+                  </Col>
+                ))}
           </Row>
         </Container>
       </div>

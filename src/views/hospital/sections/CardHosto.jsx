@@ -26,7 +26,7 @@ const CardHosto = ({ hosto, actualPosition, service }) => {
         Math.sin(dLong / 2);
     let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     let d = R * c;
-    console.log(d);
+    //console.log(d);
     setDistance(d.toFixed(2));
   };
 
